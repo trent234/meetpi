@@ -1,0 +1,100 @@
+:root {
+  --bg: #121212;
+  --surface: #1f1f1f;
+  --muted-surface: #2a2a2a;
+  --text: #e6e6e6;
+  --muted-text: #bfc7cf;
+  --accent: #0d6efd;
+  --accent-contrast: #ffffff;
+  --secondary: #6c757d;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 16px;
+  margin: 0;
+}
+
+/* Header with logo and title, placed inline to avoid increasing vertical space */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 640px;
+  margin: 24px auto 0;
+  background: transparent;
+}
+
+/* Logo size chosen to sit left of the title without making the page taller */
+.logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Keep h1 compact to avoid extra height */
+h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1;
+  color: var(--text);
+}
+
+/* Ensure forms and result containers align with header width */
+form,
+.container {
+  max-width: 640px;
+  margin: 12px auto 0;
+  background: transparent;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  margin: 8px 0;
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  color: var(--accent-contrast);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 18px 14px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  .logo {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+}
+
+a {
+  color: var(--accent);
+}
+
+.btn:focus {
+  outline: 3px solid rgba(13,110,253,0.25);
+  outline-offset: 2px;
+}

@@ -1,0 +1,26 @@
+# Helpful commands:
+# - Create a virtualenv and install this package in editable mode:
+#     python -m venv .venv && source .venv/bin/activate && python -m pip install -e .
+# - Install runtime dependencies only:
+#     python -m pip install -e .
+#
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-script"
+version = "0.0.0"
+description = "Project container for a single Python script — update metadata and dependencies as needed."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "You", email = "you@example.com" }]
+requires-python = ">=3.8"
+
+# Update the list below with the exact runtime dependency strings your script needs.
+# Leave empty ([]) if there are none.
+dependencies = ["PyJWT>=2.8.0", "bottle>=0.12.25"]
+
+# If you want to provide optional extras, uncomment and edit the block below:
+# [project.optional-dependencies]
+# dev = ["pytest", "black"]
